@@ -28,4 +28,9 @@ public class Posts {
         this.content=content;
         this.author=author;
     }
+
+    public void update(String title,String content){ //Setter 메소드를 생성하는 대신 값 변경을 위한 메소드 명시적으로 생성
+        this.title=title;
+        this.content=content;
+    }
 }
