@@ -1,5 +1,6 @@
 package com.amber.book.springboot.domain.posts;
 
+import com.amber.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor //아무런 인자도 갖지 않는 생성자 생성
 @Entity //테이블과 링크될(매칭될) 클래스임을 나타냄-JPA 사용 시 데이터베이스 작업 시 실제 쿼리를 날리는 대신 Entity 클래스 수정을 통해 작업함
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id //해당 테이블의 PK 필드 지정
     @GeneratedValue(strategy= GenerationType.IDENTITY) //PK 생성 규칙 지정;GenerationType.IDENTITY=auto_increment 형식
     private Long id;
