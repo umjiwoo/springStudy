@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-@EnableJpaAuditing //JPA Auditing 활성화
+//@EnableJpaAuditing
+// JPA Auditing(생성,수정일 자동 주입)활성화
+// ->최소 하나의 @Entity 클래스가 필요
 @SpringBootApplication //스프링부트 자동 설정,Bean 읽기/생성 자동으로 생성해줌 !!프로젝트 최상단 클래스에 있어야함
 public class Application {
     public static void main(String[] args){
